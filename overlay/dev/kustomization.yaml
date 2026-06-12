@@ -8,7 +8,7 @@ images:
   newTag: 4.0.1
 - name: spring-petclinic
   newName: ghcr.io/Chaveex/spring-petclinic
-  newTag: ebc235e6c13dd4b0cb4ee2716eb19c81dbbb2a45
+  newTag: b649f47d7644fecbdc261f7905c206efe9053f7d
 
 
 
