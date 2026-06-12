@@ -1,25 +1,25 @@
 namespace: tp7-kustomize
 
-images:
   # On garde `images:` pour piloter le tag depuis l'overlay (démonstration rollout)
   # Ici on ne change pas le repository, seulement la version (newTag)
-  - name: ghcr.io/Chaveec/spring-petclinic
-    newName: ghcr.io/Chaveec/spring-petclinic
-    newTag: 4.0.1
+images:
+- name: spring-petclinic
+  newName: ghcr.io/Chaveex/spring-petclinic
+  newTag: b649f47d7644fecbdc261f7905c206efe9053f7d
 
 
 
 # Référencer la baseline (réutiliser tous les manifests de base/)
 resources:
-  - "../../base"
+- ../../base
 
 # Appliquer les patches (modifications)
-patches:
   # Type 1 : JSON Patch (replicas.yaml) - syntaxe très spécifique, ex: /spec/replicas
-  - path: replicas.yaml
-    target:
-      kind: Deployment
-      name: clinic-deploy
-    
-  # Type 2 : Strategic Merge Patch (patch-routing.yaml) - YAML classique, fusionne avec original
-  - path: patch-routine.yaml
+patches:
+- path: replicas.yaml
+  target:
+    kind: Deployment
+    name: clinic-deploy
+- path: patch-routine.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
