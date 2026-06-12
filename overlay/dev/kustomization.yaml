@@ -5,7 +5,7 @@ namespace: tp7-kustomize
 images:
 - name: ghcr.io/Chaveex/spring-petclinic
   newName: ghcr.io/Chaveex/spring-petclinic
-  newTag: b3d40eef508eb97f3510c99e714b3df0783dcdf5
+  newTag: a55588f917f290ea06d8cd7986e45e2966ca7941
 
 
 
